@@ -1,0 +1,14 @@
+CompileFlags:
+  Add:
+    - -std=c++20
+    - -Wall
+
+InlayHints:
+  Enabled: true
+  ParameterNames: true
+  DeducedTypes: true
+
+Diagnostics:
+  ClangTidy:
+    Add: [performance-*, bugprone-*, modernize-*]
+    Remove: [modernize-use-trailing-return-type]
