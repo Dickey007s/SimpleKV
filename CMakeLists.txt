@@ -14,6 +14,13 @@ include_directories(src)
 # 自动查找 src 目录下的所有源文件 (为了起步简单，后续可手动指定)
 file(GLOB_RECURSE SOURCES "src/*.cpp" "src/*.h")
 
+set(SOURCE_FILES
+    src/main.cpp
+    src/storage/Logger.cpp
+    src/engine/KVStore.cpp
+    src/server/TcpServer.cpp  # <--- 新增这一行
+)
+
 # 生成可执行文件
 add_executable(simplekv ${SOURCES})
 
